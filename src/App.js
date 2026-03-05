@@ -5,7 +5,7 @@ import Taskcomponent from './components/Taskcomponent';
 import Recapday1 from './components/Recapday1';
 import Productscomponent from './components/Productscomponent';
 import Secondcomponent from './components/Secondcomponent';
-
+import Thirdcomponent  from "./components/Thirdcomponent";
 function App() {
   return (
     <div className="App">
@@ -26,6 +26,7 @@ function App() {
     <Recapday1/>
     <Productscomponent/>
     <Secondcomponent/>
+    <Thirdcomponent/>
     </div>
   );
 }
