@@ -1,33 +1,52 @@
 import logo from './logo.svg';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Firstcomponent from './components/Firstcomponent';
 import Taskcomponent from './components/Taskcomponent';
 import Recapday1 from './components/Recapday1';
 import Productscomponent from './components/Productscomponent';
 import Secondcomponent from './components/Secondcomponent';
-import Thirdcomponent  from "./components/Thirdcomponent";
+import Thirdcomponent from "./components/Thirdcomponent";
+import Fourthcomponent from './components/Fourthcomponenet';
+import Fifthcomponent from './components/Fifthcomponent';
+
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       <h1>Introduction to ReactJS</h1>
-      </header>
-      <h2>About me</h2>
-      <p> 17 years old. I enjoy engaging in activities which are fulfilling and feed my soul. I take long walks and i love bakking and cooking</p>
+    <BrowserRouter>
 
-      <h3>Die My Love</h3>
-      <p>Starring Robert Pattison and Jniffer Lawrence, this is a coming of age film. It tackles post-maternal depression, a form of depression which is desperately seeking awareness and attention. Society has not acquainted itself with this monster. Lawrence shows how  post-maternal depression slowly destroys marital relationships and may lead to insanity.</p>
+      <div className="App">
+        <header className="App-header">
+          <h1>Introduction to ReactJS</h1>
+        </header>
 
-      <h4>Is it better to speak or to die</h4>
-      <p>This statement has been all over substack, tiktok and anywhere where you'll find cmbyn enthusiasts. To speak is to die as speaking your truth will eventually lead to contempt from members of the society. To die itself is an act of expression. This is evident through Neil in Dead Poets Society. He spoke his truth and was despised by his father. He felt that his way of being free was to go. </p>
+        {/* nav links go here  */}
+        <nav>
+          <Link to="/first"> First component</Link><br />
+          <Link to="/second">Second componenet</Link><br />
+          <Link to="/third"> Third componenet</Link><br />
+          <Link to="/recap">Recap componenet</Link><br />
+          <Link to="/task">Task componenet</Link><br />
+          <Link to="/products">Products componenet</Link><br />
+          <Link to="/fouth">Fourth component</Link><br />
+          <Link to="/fifth">Fifth component</Link>
+        </nav>
+        <Routes>
+          <Route path='/first' element= {<Firstcomponent/>} />
+          <Route path='/second' element={<Secondcomponent/>} />
+          <Route path='/third' element= {<Thirdcomponent/>} />
+          <Route path='/recap' element={<Recapday1/>} />
+          <Route path='/task' element={<Taskcomponent/>} />
+          <Route path='/products' element={<Productscomponent/>} /> 
+          <Route path='/fourth' element={<Fourthcomponent/>} />
+          <Route path='/fifth' element={<Fifthcomponent/>} />
+        </Routes>
 
-    <Firstcomponent/>
-    <Taskcomponent/>
-    <Recapday1/>
-    <Productscomponent/>
-    <Secondcomponent/>
-    <Thirdcomponent/>
-    </div>
+        
+      </div>
+
+
+    </BrowserRouter>
   );
 }
 
